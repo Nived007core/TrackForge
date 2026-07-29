@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <div class="profile-card">
+
+        <h1>Student Profile</h1>
+
+        <div class="profile-avatar">
+            {{user.firstname[0] | upper}}
+        </div>
+
+        <form action="/update_profile" method="POST">
+
+            <div class="input-group">
+                <label>First Name</label>
+                <input type="text" name="firstname" value="{{user.firstname}}">
+            </div>
+
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" name="lastname"value ="{{user.lastname}}">
+            </div>
+
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" name="username"value="{{user.username}}" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Date of Birth</label>
+                <input type="date" name="dob" value ="{{user.dob if user.dob else ''}}">
+            </div>
+
+            <div class="input-group">
+                <label>Blood Group</label>
+                <input type="text" name="blood_group" value ="{{user.blood_group if user.blood_group else ''}}">
+            </div>
+
+            <div class="input-group">
+                <label>Nationality</label>
+                <input type="text" name="nationality" value ="{{user.nationality if user.nationality else ''}}">
+            </div>
+
+            <div class="input-group">
+                <label>Language</label>
+                <input type="text" name="language" value ="{{user.language if user.language else ''}}">
+            </div>
+
+            <button>Save Changes</button>
+
+        </form>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

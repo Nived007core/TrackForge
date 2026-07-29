@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, helvetica,sans-serif;
+    background-color:rgb(28, 100, 173);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+.container{
+    background:white;
+    width:500px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0px 0px 300px rgb(196, 210, 8)
+}
+.title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+.title hr{
+    flex:1;
+    border:none;
+    height:2px;
+    background:#ccc;
+}
+.title h1{
+    font-size:42px;
+    color:#000000;
+}
+.subtitle{
+text-align:center;
+color:#777;
+margin-bottom:20px;
+font-size:16px;
+}
+input{
+    margin:12px 0;
+    width:100%;
+    padding: 10px;
+    border:1px solid#ccc;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+.row{
+    display:flex;
+    gap:10px;
+}
+.row input{
+    flex:1;
+}
+.terms{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:10px;
+    margin:15px 0;
+}
+.terms input{
+    width:18px;
+    height:18px;
+    flex-shrink:0;
+    margin:0;
+}
+.terms label{
+    font-size:15px;
+    color:#777;
+    cursor:pointer;
+}
+button{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:#2e7d32;
+}
+login{
+    text-align:center;
+    margin-top:40px;
+    font-size:16px;
+}
+.login a{
+    color:rgb(25, 0, 255);
+    text-decoration:none;
+    font-weight:bold;
+}
+.login a:hover{
+    text-decoration:underline;
+}
+.error{
+    color:red;
+    font-size:14px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    text-align:center;
+}

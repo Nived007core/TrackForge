@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>TrackForge</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'dashboard.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename ='dashboard.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo"> TrackForge</h2>
+            <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Learning</a>
+            <a href="#">project</a>
+            <a href="#">progress</a>
+            <a href="#">Settings</a>
+            <a href="/logout" class="logout">Logout</a>
+            </nav>
+            </aside>
+    
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="profile-container">
+                <div class="profile-avatar" id="profileAvatar">
+                {{user.firstname[0] | upper}}
+            </div>
+            <div class="dropdown" id="dropdownmenu">
+                <a href="/profile">👤 Manage Profile</a>
+                <a href="#"> ⚙ Settings</a>
+                <a href="/logout">🚪 Logout</a>
+            </div>
+            </div>
+    </div>
+        <div class="hero">
+            <p class="greeting">👋 Welcome back</p>
+            <h1> {{ user.firstname}}</h1>
+            <p class="subtitle">Lets continue your learning journey 🚀</p>
+    </div>
+    <div class="stats">
+        <div class="card">
+            <span class="icon">📚</span>
+            <h2> 6</h2>
+            <h3>SKILLS</h3>
+            <p> Technologies learned</p>
+        </div>
+        <div class="card">
+            <span class="icon">💻</span>
+            <h2> 2 </h2>
+            <h3> PROJECTS</h3>
+            <p> Completed projects</p>
+        </div>
+        <div class="card">
+            <span class="icon">🗄️</span>
+            <h2>Mysql</h2>
+            <h3>DATABASE </h3>
+            <p> MySql online</p>
+            </div>
+            <div class="card">
+                <span class="icon">🎯</span>
+                <h2>GOAL</h2>
+                <h3> Interactive Dashboard</h3>
+                <p>Current Task </p>
+            </div>
+    </div>
+</main>
+</div>
+<script src="{{url_for('static', filename='dashboard.js')}}"> </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
